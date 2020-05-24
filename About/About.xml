@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>CraftableBedrolls</name>
+  <author>Oz</author>
+  <supportedVersions><li>1.0.0</li></supportedVersions>
+  <description>Bedrolls can be crafted at crafting spots and tailor benches.
+  
+  </description>
+</ModMetaData>
