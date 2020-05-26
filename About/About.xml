@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>CraftableBedrolls</name>
+  <name>Craftable Bedrolls</name>
   <author>Oz</author>
-  <supportedVersions><li>1.0.0</li></supportedVersions>
-  <description>Bedrolls can be crafted at crafting spots and tailor benches.
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+  </supportedVersions>
+  <packageId>lobz.craftablebedrolls</packageId>
+  <description>Bedrolls can be crafted at crafting spots and tailor benches, and can no longer be built directly on the floor.
   
   </description>
 </ModMetaData>

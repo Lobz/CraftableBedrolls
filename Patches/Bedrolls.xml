@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]</xpath>
+    <value>
+      <recipeMaker>
+        <workSpeedStat>TailoringSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Tailor</effectWorking>
+        <soundWorking>Recipe_Tailor</soundWorking>
+        <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+        <recipeUsers>
+          <li>ElectricTailoringBench</li>
+          <li>HandTailoringBench</li>
+          <li>CraftingSpot</li>
+        </recipeUsers>
+        <defaultIngredientFilter>
+          <categories>
+            <li>Root</li>
+          </categories>
+        </defaultIngredientFilter>
+      </recipeMaker>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Bedroll"]/statBases</xpath>
+    <value>
+        <WorkToMake>600</WorkToMake>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="BedrollDouble"]/statBases</xpath>
+    <value>
+        <WorkToMake>1100</WorkToMake>
+    </value>
+  </Operation>
+
+  <!-- remove from Furniture category so it's not buildable anymore -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]</xpath>
+    <value>
+      <designationCategory></designationCategory>
+    </value>
+  </Operation>
+
+</Patch>
