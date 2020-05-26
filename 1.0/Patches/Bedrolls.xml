@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]</xpath>
+    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble" or defName="BedrollTriple" or defName="BedrollQuad"]</xpath>
     <value>
       <recipeMaker>
         <workSpeedStat>TailoringSpeed</workSpeedStat>
@@ -39,10 +39,35 @@
 
   <!-- remove from Furniture category so it's not buildable anymore -->
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]</xpath>
+    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble" or defName="BedrollTriple" or defName="BedrollQuad"]</xpath>
     <value>
       <designationCategory></designationCategory>
     </value>
+  </Operation>
+
+<!-- Compatibility with other mods -->
+  <Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Polyamory Beds (Vanilla Edition)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="BedrollTriple"]/statBases</xpath>
+          <value>
+              <WorkToMake>1600</WorkToMake>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="BedrollQuad"]/statBases</xpath>
+          <value>
+              <WorkToMake>2100</WorkToMake>
+          </value>
+        </li>
+      </operations>
+    </match>
   </Operation>
 
 </Patch>
