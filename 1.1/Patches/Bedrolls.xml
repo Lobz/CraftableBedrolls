@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationAdd">
-    <path>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble" or defName="BedrollTriple" or defName="BedrollQuad"]</xpath>
+    <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble" or defName="BedrollTriple" or defName="BedrollQuad"]</xpath>
     <value>
       <recipeMaker>
         <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
